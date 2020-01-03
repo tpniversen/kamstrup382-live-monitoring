@@ -2,8 +2,9 @@
  NodeMCU DEVKIT v1.0
  Read analog signal connected to A0
 */
-#include <Redis.h>
 #include <ESP8266WiFi.h>
+#include "libraries/esp8266-redis-master/Redis.h"
+#include "libraries/esp8266-redis-master/Redis.cpp"
      
 const char* ssid     = "Iversen";
 const char* password = "LockCityRocks";  
@@ -57,7 +58,8 @@ void setup() {
      Serial.println(WiFi.macAddress().c_str());
   }
 
-  if (redis.begin(REDIS_PASSWORD)){
+  //if (redis.begin(REDIS_PASSWORD)){
+  if (redis.begin()){
     Serial.println("Connected to the Redis server!");
   } 
   else {
