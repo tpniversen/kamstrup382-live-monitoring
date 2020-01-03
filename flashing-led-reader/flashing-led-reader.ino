@@ -6,8 +6,8 @@
 #include "libraries/esp8266-redis-master/Redis.h"
 #include "libraries/esp8266-redis-master/Redis.cpp"
      
-const char* ssid     = "Iversen";
-const char* password = "LockCityRocks";  
+const char* ssid     = "SsidName";
+const char* password = "Password";  
 int wifiStatus;
 
 // Redis details
